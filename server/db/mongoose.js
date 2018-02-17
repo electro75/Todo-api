@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var moment = require('moment');
-var REMOTE_MONGO = require('./keys').REMOTE_MONGO;
+var { REMOTE_MONGO } = require('./keys');
 // const REMOTE_MONGO = 'mongodb://sahil7595:12345678@ds233208.mlab.com:33208/todos-api';
 
 var env = process.env.NODE_ENV || 'development';
