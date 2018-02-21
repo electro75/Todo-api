@@ -1,4 +1,4 @@
-const REMOTE_MONGO = 'mongodb://sahil7595:12345678@ds233208.mlab.com:33208/todos-api';
+const REMOTE_MONGO = 'mongodb://sahil7595:12345678@ds143678.mlab.com:43678/api-todo-app';
 
 
 module.exports = {

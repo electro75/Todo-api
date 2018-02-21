@@ -10,9 +10,7 @@ var db = {
   test : 'mongodb://localhost:27017/TodoAppTest',
   mlab : REMOTE_MONGO
 };
-if(process.env.PORT){
-  process.env.MONGODB_URI = db.mlab;
-} else {
+if(!process.env.PORT){
   // process.env.PORT = 3000;
   // if(env === 'development'){
   //   process.env.MONGODB_URI = db.dev;
