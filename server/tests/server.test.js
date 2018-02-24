@@ -180,7 +180,7 @@ describe('PATCH /todos/:id', ()=>{
                 expect(res.body.todo.text).toBe(text);
                 expect(res.body.todo.completed).toBe(true);
                 // expect(res.body.todo.completedAt).toBeA('string');
-                expect(typeof(res.body.todo.completedAt)).toBe('number')
+                expect(typeof(res.body.todo.completedAt)).toBe('string')
             })
             .end(done)
     });
