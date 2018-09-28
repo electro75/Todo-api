@@ -4,12 +4,15 @@ const bodyParser = require('body-parser');
 const { ObjectId } = require('mongodb');
 
 var { mongoose } = require('./db/mongoose');
+var cors = require('cors');
 var { Todo } = require('./models/todo');
 var { User } = require('./models/user');
 var { authenticate } = require('./middleware/authenticate');
 
 var app = express();
 const port = process.env.PORT;
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
