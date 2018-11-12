@@ -85,7 +85,7 @@ app.post('/todos/:id', authenticate, (req, res)=>{
     if(!ObjectId.isValid(id)) {
         return res.status(404).send();
     }
-    if(_.isBoolean(body.completed) && body.completed) {
+    if(body.completed) {
         body.completedAt = new Date().getTime();
     } else {
         body.completed = false;
