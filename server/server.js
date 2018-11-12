@@ -43,7 +43,7 @@ app.get('/todos', authenticate, (req, res)=>{
     })
 })
 
-app.post('/todos/:id', authenticate, (req, res)=>{
+app.get('/todos/:id', authenticate, (req, res)=>{
     var id = req.params.id;
     if(!ObjectId.isValid(id)) {
         return res.status(404).send();
@@ -79,7 +79,7 @@ app.delete('/todos/:id', authenticate, (req,res)=>{
     });
 });
 
-app.patch('/todos/:id', authenticate, (req, res)=>{
+app.post('/todos/:id', authenticate, (req, res)=>{
     var id = req.params.id;
     var body = _.pick(req.body, ['text', 'completed']);
     if(!ObjectId.isValid(id)) {
