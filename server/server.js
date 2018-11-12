@@ -43,7 +43,7 @@ app.get('/todos', authenticate, (req, res)=>{
     })
 })
 
-app.get('/todos/:id', authenticate, (req, res)=>{
+app.post('/todos/:id', authenticate, (req, res)=>{
     var id = req.params.id;
     if(!ObjectId.isValid(id)) {
         return res.status(404).send();
