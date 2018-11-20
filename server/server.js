@@ -114,7 +114,8 @@ app.post('/users', (req, res)=>{
         res.header('x-auth', token).send(user);
 
     }).catch((e)=>{
-        res.status(400).send(e);
+        // res.status(400).send(e);
+        res.send({ error: true, message: `User with ${user.email} already exists!` })
     })
 });
 
@@ -132,7 +133,7 @@ app.post('/users/login', (req, res)=>{
 
     }).catch((e)=>{
         // res.send(400).send();
-        res.send({ error: true, message: e.message });
+        res.send({ error: true, message: 'Email and Password does not match!' });
     })
 })
 
