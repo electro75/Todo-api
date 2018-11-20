@@ -131,7 +131,8 @@ app.post('/users/login', (req, res)=>{
         })
 
     }).catch((e)=>{
-        res.send(400).send();
+        // res.send(400).send();
+        res.send({ error: true, message: "Email and password do not match" });
     })
 })
 
